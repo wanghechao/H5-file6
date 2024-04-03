@@ -1,0 +1,433 @@
+body {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.BigBox {
+    width: 400px;
+    height: 700px;
+}
+
+/*这是1的内容*/
+.NeiRon {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.NeiRon img {
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.NeiRon .shuzi {
+    position: absolute;
+    top: 41.7%;
+    left: 40%;
+    color: white;
+}
+
+.NeiRon .jdt {
+    top: 50px;
+}
+
+.NeiRon .xsz {
+    top: 50px;
+}
+
+.NeiRon .pz {
+    top: 50px;
+    left: 60px;
+    transform-origin: center;
+}
+
+.NeiRon .yanhua {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.NeiRon .yanhua img {
+    opacity: 0;
+}
+
+/*这里由js代码调用*/
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/*这是2内容----------------------------------------------------------------*/
+
+.NeiRon2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: none;
+    overflow: hidden;
+}
+
+.NeiRon2 img {
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.NeiRon2 .pz2 {
+    transform-origin: 80% 80% 0;
+}
+
+/*这里调用旋转*/
+.NeiRon2 .dl {
+    animation: dlrotate 5s linear infinite;
+}
+
+/*灯笼旋转*/
+@keyframes dlrotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.textbtn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: Move 2s;
+}
+
+/*按钮移动*/
+@keyframes Move {
+    0% {
+        transform: translate(-300px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+.img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.textbtn p {
+    position: absolute;
+    top: 78.5%;
+    left: 36%;
+    color: bisque;
+    font-size: 23px;
+}
+
+.yanhua :nth-child(1) {
+    animation: yanhua_alter 2s linear infinite;
+}
+
+.yanhua :nth-child(2) {
+    animation: yanhua_alter 2s linear 0.5s infinite;
+}
+
+.yanhua :nth-child(3) {
+    animation: yanhua_alter 2s linear 0.8s infinite;
+}
+
+.yanhua :nth-child(4) {
+    animation: yanhua_alter 2s linear 1.2s infinite;
+}
+
+/*烟花效果*/
+@keyframes yanhua_alter {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.NeiRon2 .yinyue {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 30px;
+    top: 40px;
+    animation: musicrotate 3s linear infinite;
+    cursor: pointer;
+    z-index: 99;
+}
+
+/*音乐旋转*/
+@keyframes musicrotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.NeiRon2 .nextbtn {
+    position: absolute;
+    top: 80%;
+    left: 23%;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/*这是3内容---------------------------------------------------------*/
+
+.NeiRon3 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+
+.NeiRon3 img {
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.NeiRon3 .btn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: Move 2s;
+}
+
+.NeiRon3 .alltext {
+    top: 35%;
+    left: 22%;
+    position: absolute;
+    width: 230px;
+    height: 300px;
+}
+
+.NeiRon3 .alltext div {
+    opacity: 0;
+}
+
+.NeiRon3 .alltext :nth-child(1) {
+    animation: textopacity 3s ease 0s forwards;
+}
+
+.NeiRon3 .alltext :nth-child(3) {
+    animation: textopacity 3s ease 2s forwards;
+}
+
+.NeiRon3 .alltext :nth-child(5) {
+    animation: textopacity 3s ease 3s forwards;
+}
+
+
+/*文字出现*/
+@keyframes textopacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.NeiRon3 .btn :nth-child(2) {
+    position: absolute;
+    width: 170px;
+    height: 80px;
+    bottom: 10%;
+    left: 28%;
+    cursor: pointer;
+}
+
+
+/*这是4内容------------------------------------------------------------*/
+
+
+
+.BigBox .NeiRon4 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.BigBox .NeiRon4 img{
+    position: absolute;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+.BigBox .NeiRon4 .datidl {
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    width: 250px; 
+    height: 250px;
+}
+
+/*这里使用flex布局控制不了图片分布 ，似乎是因为上面第二个img代码原因，元素都成一块了*/
+/*不用管上面这注释,好像是我flex布局太菜了才没实现*/
+.BigBox .NeiRon4 .datidl img {
+    position: inherit;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    animation: dlscale 2s linear infinite  ;
+    cursor: pointer;
+}
+
+@keyframes dlscale{
+    0%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.8);
+    }
+}
+
+.NeiRon4 .wenti .error {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: gray;
+    z-index: 99;
+    display: block;
+    left: 35%;
+    top: 43%;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    opacity: 0;
+}
+
+@keyframes error_opacity {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.NeiRon4 .wenti_radio {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    left: 25%;
+    top: 27%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NeiRon4 .wenti_radio div {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.NeiRon4 .wenti div .next_btn {
+    position: absolute;
+    z-index: 9;
+    width: 130px;
+    height: 50px;
+    left: 33%;
+    top: 60%;
+    cursor: pointer;
+}
+
+/*祝福语*/
+.NeiRon4 .zhufu {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    left: 30%;
+    bottom: 0%;
+    cursor: pointer;
+    transform: translate(-300px);
+}
+
+.NeiRon4 .lastimg :nth-child(1){
+    position: absolute;
+    display: none;
+}
+
+.NeiRon4 .lastimg :nth-child(2){
+    position: absolute;
+    display: none;
+}
+
+@keyframes lastanimation {
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(0.7);
+    }
+    75%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.NeiRon4 .lastimg .return {
+    position: absolute;
+    width: 180px;
+    height: 70px;
+    bottom: 10%;
+    left: 25%;
+    cursor: pointer;
+}
